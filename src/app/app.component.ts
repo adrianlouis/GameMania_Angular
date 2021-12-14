@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ExemploForm';
+  myScriptElement: HTMLScriptElement;
+  constructor(){
+   this.myScriptElement = document.createElement("script");
+   this.myScriptElement.src = "assets/js/newScript.js";
+    document.body.appendChild(this.myScriptElement);
+  }
+  title = 'Game Mania';
+
 }

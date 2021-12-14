@@ -1,0 +1,233 @@
+<div class="home">
+    <div class="bannerAngular">
+
+        <div class="bannerImg" *ngIf="numero === 1">
+            <img src="assets/img/banners/banner1.jpg">
+        </div>
+        <div class="bannerImg" *ngIf="numero === 2">
+            <img src="assets/img/banners/banner2.jpg">
+        </div>
+        <div class="bannerImg" *ngIf="numero === 3">
+            <img src="assets/img/banners/banner3.jpg">
+        </div>
+
+        <div style="text-align: center; background-color: black; padding-top: 10px;">
+            <span [ngClass]="{'dotChange': selectIndex == 1, 'dot': selectIndex != 1}" (click)="dotOne()"
+                class="dot"></span>
+            <span [ngClass]="{'dotChange': selectIndex == 2, 'dot': selectIndex != 2}" (click)="dotTwo()"
+                class="dot"></span>
+            <span [ngClass]="{'dotChange': selectIndex == 3, 'dot': selectIndex != 3}" (click)="dotThree()"
+                class="dot"></span>
+        </div>
+
+    </div>
+
+    <div class="news">
+        <!-- BARRA DOS PRODUTOS EM DESTAQUE  -->
+        <div id="barraDestaque" class="barraDivisoriaDeSecao">
+            <span id="jogosDestaque" class="barraTxt">Produtos em Destaque</span>
+        </div>
+
+        <div class="contDestaques">
+
+            <!-- CONTAINER DOS CARTOES -->
+            <div id="destaque" class="contJogosDest">
+
+
+                <div *ngFor="let index of corre" id="card" class="card">
+                    <div class="img">
+                        <a href="novoDetalhe.html?code=1">
+                            <img id="idCardImagem" [src]="index.capa">
+                        </a>
+                    </div>
+                    <div class="cardTexto">
+                        <span id="product" class="nomeDoProduto">{{ index.nome }}</span>
+                        <div class="promoPreco">
+                            <span class="promo"></span>
+                            <span class="precoDoProduto">{{ index.preco }}</span>
+                        </div>
+                        <span class="parcelas">até 6x sem juros</span>
+                        <a id="btnBuy" href="novoDetalhe.html?arr=0&code=1" class="btnBuy">Comprar</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="barraDivisoriaDeSecao">
+        <span class="barraTxt">Newsletter</span>
+        <span class=barraTxtSm>Inscreva-se para receber notificações sobre promoções e lançamentos</span>
+    </div>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="containerNewsletter">
+
+            <label for="email">Email: </label>
+            <input class=inputNome type="email" id="email" name="email" [(ngModel)]="userModel.email">
+<!-- 
+            <label for="senha">Senha: </label>
+            <input type="password" id="senha" name="senha" [(ngModel)]="userModel.senha"> -->
+
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+
+
+    <div class="news">
+
+        <!-- NOME DA BARRA  -->
+        <div class="barraDivisoriaDeSecao">
+            <span class="barraTxt">Notícias Gamer</span>
+        </div>
+        <!-- NOTICIAS GAMER  -->
+        <div class="contNews">
+            <div *ngFor="let i of news" class="cardNews">
+                <div class="newsPic">
+                    <img [src]="i.img">
+                </div>
+                <div class="spanDesc">
+                    <span>{{i.noticia}}</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- GALERIA  -->
+        <div class="galeriaEnews">
+
+            <div class="galeria">
+
+                <div class="containerFlex">
+                    <div class="containerNews">
+                        <span class="spanNews">Para nós, o mais gratificante é ver a satisfação dos nossos clientes
+                            enquanto estão utilizando
+                            nossos
+                            produtos.
+                            Por isso sempre pedimos para que nos marquem nas redes sociais, com fotos ou vídeos, para
+                            que
+                            nossa
+                            galeria
+                            de
+                            clientes satisfeitos continue sempre a crescer, junto com nosso time Game Mania!
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="galeriaSpan">
+                    <div class="containerGaleria">
+                        <h2 style="text-align:center">Gameníacos</h2>
+
+                        <div class="container">
+                            <div class="mySlidesG">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="assets/img/gallery/play1.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidesG">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="assets/img/gallery/pla2.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidesG">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="assets/img/gallery/pla3.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidesG">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="assets/img/gallery/play4.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidesG">
+                                <div class="numbertext">5 / 6</div>
+                                <img src="assets/img/gallery/play5.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidesG">
+                                <div class="numbertext">6 / 6</div>
+                                <img src="assets/img/gallery/play6.jpg" style="width:100%">
+                            </div>
+
+                            <a class="prev" onclick="plusSlidesG(-1)">❮</a>
+                            <a class="next" onclick="plusSlidesG(1)">❯</a>
+
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src="assets/img/gallery/play1.jpg" style="width:100%;"
+                                        onclick="currentSlideG(1)" alt="@ChrisKrad - Curitiba - PR">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="assets/img/gallery/pla2.jpg" style="width:100%"
+                                        onclick="currentSlideG(2)" alt="@PatrickDellaCruz - São Paulo - SP">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="assets/img/gallery/pla3.jpg" style="width:100%"
+                                        onclick="currentSlideG(3)" alt="@Christine18122002 - Rio de Janeiro - RJ">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="assets/img/gallery/play4.jpg" style="width:100%"
+                                        onclick="currentSlideG(4)" alt="@MandyInTheWoodlands - São Paulo - SP">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="assets/img/gallery/play5.jpg" style="width:100%"
+                                        onclick="currentSlideG(5)" alt="@CamilaSkaterZO - Rio de Janeiro - RJ">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="assets/img/gallery/play6.jpg" style="width:100%"
+                                        onclick="currentSlideG(6)" alt="@RodrigoALenda - Belo Horizonte - MG">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BARRA MAIS VENDIDOS  -->
+        <div id="barraDestaque" class="barraDivisoriaDeSecao">
+            <span id="jogosDestaque" class="barraTxt">Mais Vendidos</span>
+        </div>
+
+        <div class="contDestaques">
+            <!-- CONTAINER DOS CARTOES -->
+            <div id="destaque" #destaque class="contJogosDest">
+
+                <div *ngFor="let noticia of listaNoticias" id="card" class="card">
+                    <div class="img">
+                        <a href="novoDetalhe.html?code=1">
+                            <img id="idCardImagem" [src]="noticia.capa">
+                        </a>
+                    </div>
+                    <div class="cardTexto">
+                        <span id="product" class="nomeDoProduto">{{ noticia.titulo }}</span>
+                        <div class="promoPreco">
+                            <span class="promo"></span>
+                            <span class="precoDoProduto">{{ noticia.descricao }}</span>
+                        </div>
+                        <span class="parcelas"><i class="fas fa-sim-card"></i> 3x sem juros</span>
+                        <a id="btnBuy" href="novoDetalhe.html?arr=0&code=$1" class="btnBuy">Comprar</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

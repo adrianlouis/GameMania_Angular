@@ -1,0 +1,45 @@
+.slideCont{
+    width: 100vw;
+    position: relative;
+}
+.mySlide{
+    display: none;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5 s;
+}
+@keyframes fade{
+    from{
+        opacity: .4s
+    }
+    to{
+        opacity: 1
+    }
+}
+.nTxt{
+    color:white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+.active{
+    background-color: #72a1e5;
+}
+.bannerImg{
+    width: 100%;
+    display: block;
+}
+.bannerImg img{
+    width: 100%;
+}

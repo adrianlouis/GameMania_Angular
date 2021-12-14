@@ -1,0 +1,123 @@
+<div class="banner">
+
+    <img src="assets/img/banners/lancamentos.jpg">
+</div>
+
+
+<div class="news">
+
+
+    <div class="barraMensal">
+        <span class="barraTxt">Lançamentos de Dezembro - 2021</span>
+    </div>
+
+    <div class="contDez21">
+
+        <div *ngFor="let index of jogosDez21" class="grid-item">
+            <img [src]="index.img">
+            <span>{{index.nome}}</span>
+            <span>{{index.data}}</span>
+        </div>
+
+    </div>
+
+
+
+    <div class="barraMensal">
+        <span class="barraTxt">Lançamentos de Novembro - 2021</span>
+    </div>
+
+    <div class="contNov21">
+
+        <div *ngFor="let index of jogosNov21" class="grid-item">
+            <img [src]="index.img">
+            <span>{{index.nome}}</span>
+            <span>{{index.data}}</span>
+        </div>
+
+    </div>
+
+
+
+    <div class="barraMensal">
+        <span class="barraTxt">Lançamentos de Outubro - 2021</span>
+    </div>
+
+    <div class="contOut21">
+
+        <div *ngFor="let index of jogosOut21" class="grid-item">
+            <img [src]="index.img">
+            <span>{{index.nome}}</span>
+            <span>{{index.data}}</span>
+        </div>
+
+    </div>
+
+    <div class="barraMensal">
+        <span class="barraTxt">Lançamentos de Setembro - 2021</span>
+    </div>
+
+    <div class="contSet21">
+
+        <div *ngFor="let index of jogosSet21" class="grid-item">
+            <img [src]="index.img">
+            <span>{{index.nome}}</span>
+            <span>{{index.data}}</span>
+        </div>
+
+    </div>
+
+
+
+    <div class="barraMensal">
+        <span class="barraTxt">Lançamentos de Agosto - 2021</span>
+    </div>
+
+    <div class="contAgo21">
+
+        <div *ngFor="let index of jogosAgo21" class="grid-item">
+            <img [src]="index.img">
+            <span>{{index.nome}}</span>
+            <span>{{index.data}}</span>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+<div class="bans1">
+
+    <div class="bans1Left">
+        <a routerLink="">
+            <div class="banImg">
+                <img class="lancImg" src="assets/img/banners/banner1.jpg">
+            </div>
+        </a>
+
+        <div class="captionB1L">
+            <a routerLink="">
+                <span>Início</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="bans1Right">
+        <a routerLink="../prevenda">
+        <div class="banImg">
+                <img src="assets/img/banners/bannerPreVenda.jpg">
+            </div>
+        </a>
+
+        <div class="captionB1L">
+            <a routerLink="../prevenda">
+                <span>Pré-Venda</span>
+            </a>
+        </div>
+    </div>
+
+</div>
