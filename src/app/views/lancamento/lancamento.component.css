@@ -53,12 +53,10 @@ body{
 
 .bans1{
     width: 95vw;
-    /* height: 70vh; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 1px solid red; */
     margin: 50px auto;
     color: white;
 }
@@ -67,8 +65,6 @@ body{
 
 .bans1Left, .bans1Right{
     width: 47%;
-    /* height: 100%; */
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -77,21 +73,17 @@ body{
 }
 
 .banImg{
-    /* height: 80%; */
     width: 100%;
-    /* border: 1px solid purple; */
     overflow: hidden;
 }
 
 .bans1Left img, .bans1Right img{
-    /* height: 100%; */
     width: 100%;
 }
 
 .captionB1L{
     width: 100%;
     height: 20%;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -105,3 +97,124 @@ font-weight: 700;
     text-decoration: none;
     color: white;
 }
+
+
+
+.barraTxt{
+    font-size: 3em;
+    color: white;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    padding-bottom: 10px;
+    
+}
+
+
+
+
+.barraNews, .barraMensal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+text-align: center;
+height: 70px;
+width: 100%;
+margin: 40px 0;
+border-bottom: 10px solid black;
+}
+
+.barraMensal{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    border: unset;
+    margin-top: 15px;
+    height: 75px;
+
+}
+
+
+
+@media only screen and (max-width: 900px){
+    .contNov21{
+        display: grid;
+        grid-template-columns: auto auto;
+        /* background-color: #f0f4f9; */
+        padding: 10px;
+        grid-gap: 10px 10px;
+        width: 95%;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .contNov21, .contOut21, .contSet21, .contAgo21, .contDez, .contJan, .contFev, .contDez21{
+        display: grid;
+        grid-template-columns: auto auto;
+        /* background-color: #f0f4f9; */
+        padding: 10px;
+        grid-gap: 10px 10px;
+        width: 95%;
+        color: white;
+        justify-content: space-evenly;
+    }  
+
+    .barraTxt{
+        font-size: 2rem;
+    }
+
+  
+}
+@media only screen and (max-width: 490px){
+    .barraTxt{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 420px){
+    .contNov21, .contOut21, .contSet21, .contAgo21, .contDez, .contJan, .contFev{
+        display: grid;
+        grid-template-columns: auto;
+        /* background-color: #f0f4f9; */
+        padding: 10px;
+        grid-gap: 10px 10px;
+        width: 95%;
+        color: white;
+        justify-content: space-evenly;
+    }
+    .banner{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .contNov21, .contOut21, .contSet21, .contAgo21, .contDez, .contJan, .contFev, .contDez21{
+        display: grid;
+        grid-template-columns: auto;
+        /* background-color: #f0f4f9; */
+        padding: 10px;
+        grid-gap: 10px 10px;
+        width: 95%;
+        color: white;
+        justify-content: space-evenly;
+    }
+    .banner{
+        display: none;
+    }
+
+    .bans1{
+        flex-direction: column;
+    }
+    .bans1Left, .bans1Right{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .barraTxt{
+        font-size: 1.3rem;
+    }
+    .barraNews{
+        padding: unset;
+        margin: unset;
+    }
+}
+

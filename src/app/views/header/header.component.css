@@ -281,4 +281,13 @@
     .headerTopRight{
         display: none;
     }
+
+    .textoRedLogo, #aa{
+        font-size: 2rem;
+    }
+
+    #sideMenuLogin{
+        display: none;
+    }
+
 }

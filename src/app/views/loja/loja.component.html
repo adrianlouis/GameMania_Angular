@@ -5,13 +5,7 @@
     </div>
 
     <div class="contSetasMoverScroll">
-
-        <i id="setaScrollEsq" onclick="scrollDireita()" style='font-size:50px; color: white' class='fas'>&#xf104;</i>
-
-
         <div id="topSeller" class="contNews">
-
-
             <div *ngFor="let index of mVendidos" id="card" class="card">
                 <div class="imgAcessorios">
                     <img [src]="index.img">
@@ -22,33 +16,20 @@
                         <span class="promo"></span>
                         <span class="precoDoProduto">{{index.preco}}</span>
                     </div>
-                    <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
+                    <span class="parcelas">6x sem juros</span>
                     <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
                 </div>
             </div>
-
-
         </div>
-        <i id="setaScrollDir" onclick="scrollEsquerda()" style='font-size:50px; color: white;' class='fas'>&#xf105;</i>
-
     </div>
 
-
-
-
-
-
-
-
     <div class="bans1">
-
         <div class="bans1Left">
             <div class="banImg">
                 <a routerLink="../lancamento">
                     <img class="lancImg" src="assets/img/banners/bannerLançamento.jpg">
                 </a>
             </div>
-
             <div class="captionB1L">
                 <a routerLink="../lancamento">
                     <span>Novos Lançamentos</span>
@@ -62,7 +43,6 @@
                     <img src="assets/img/banners/bannerPreVenda.jpg">
                 </a>
             </div>
-
             <div class="captionB1L">
                 <a routerLink="../prevenda">
                     <span>Pré-Venda</span>
@@ -70,10 +50,7 @@
                 </a>
             </div>
         </div>
-
     </div>
-
-
 
     <div class="barraNews">
         <span class="barraTxt">Jogos em Promoção</span>
@@ -81,34 +58,27 @@
 
     <!-- AREA PARA LANÇAMENTOS OU PRÉ-VENDA  -->
 
-    <div class="contSetasMoverScroll">
 
-        <i id="setaScrollEsq" onclick="scrollDireita()" style='font-size:50px; color: white' class='fas'>&#xf104;
-        </i>
+    <div id="topSeller" class="contNews">
 
 
-        <div id="topSeller" class="contNews">
-
-
-            <div *ngFor="let index of promos" id="card" class="card">
-                <div class="img">
-                    <img [src]="index.img">
-                </div>
-                <div class="cardTexto">
-                    <span id="product" class="nomeDoProduto">{{index.nome}}</span>
-                    <div class="promoPreco">
-                        <span class="promo"></span>
-                        <span class="precoDoProduto">{{index.preco}}</span>
-                    </div>
-                    <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                    <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-                </div>
+        <div *ngFor="let index of promos" id="card" class="card">
+            <div class="img">
+                <img [src]="index.img">
             </div>
-
+            <div class="cardTexto">
+                <span id="product" class="nomeDoProduto">{{index.nome}}</span>
+                <div class="promoPreco">
+                    <span class="promo"></span>
+                    <span class="precoDoProduto">{{index.preco}}</span>
+                </div>
+                <span class="parcelas">6x sem juros</span>
+                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
+            </div>
         </div>
-        <i id="setaScrollDir" onclick="scrollEsquerda()" style='font-size:50px; color: white;' class='fas'>&#xf105;</i>
 
     </div>
+
 
 
     <!-- BANNER ACESSORIOS  -->
@@ -118,55 +88,24 @@
 
     <div class="shopAcessorios">
 
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/controle ps5.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Controle de PS5</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 400,00</span>
+        <div id="topSeller" class="contNews">
+
+
+            <div *ngFor="let index of cardAcessorios" id="card" class="card">
+                <div class="imgAcessorios">
+                    <img [src]="index.img">
                 </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
+                <div class="cardTexto">
+                    <span id="product" class="nomeDoProduto">{{index.nome}}</span>
+                    <div class="promoPreco">
+                        <span class="promo"></span>
+                        <span class="precoDoProduto">{{index.preco}}</span>
+                    </div>
+                    <span class="parcelas">6x sem juros</span>
+                    <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
+                </div>
             </div>
         </div>
-
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/controle xbox sx.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Controle de Xbox One</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 350,00</span>
-                </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-            </div>
-        </div>
-
-
-
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/cadeira.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Cadeira Gamer</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 790,00</span>
-                </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-            </div>
-        </div>
-
-
-
     </div>
 
 
@@ -219,54 +158,25 @@
 
     <div class="shopAcessorios">
 
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/ideapad 3i.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Lenovo Ideapad 3i</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 2.600,00</span>
+        <div id="topSeller" class="contNews">
+
+
+            <div *ngFor="let index of cardNotes" id="card" class="card">
+                <div class="imgAcessorios">
+                    <img [src]="index.img">
                 </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-            </div>
-        </div>
-
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/galaxy book s.webp">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Galaxy Book S</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 6.350,00</span>
+                <div class="cardTexto">
+                    <span id="product" class="nomeDoProduto">{{index.nome}}</span>
+                    <div class="promoPreco">
+                        <span class="promo"></span>
+                        <span class="precoDoProduto">{{index.preco}}</span>
+                    </div>
+                    <span class="parcelas">6x sem juros</span>
+                    <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
                 </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
             </div>
+
         </div>
-
-
-
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/rog zeph.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Asus Rog Zephyrus Duo</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 35.790,00</span>
-                </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-            </div>
-        </div>
-
-
 
     </div>
 
@@ -276,54 +186,25 @@
 
     <div class="shopAcessorios">
 
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/s21Ultra5G.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Galaxy S21 Ultra 5G</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 6.250,00</span>
+        <div id="topSeller" class="contNews">
+
+
+            <div *ngFor="let index of cardSmarts" id="card" class="card">
+                <div class="imgAcessorios">
+                    <img [src]="index.img">
                 </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-            </div>
-        </div>
-
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/iphoneXR.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Iphone Xr</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 3.150,00</span>
+                <div class="cardTexto">
+                    <span id="product" class="nomeDoProduto">{{index.nome}}</span>
+                    <div class="promoPreco">
+                        <span class="promo"></span>
+                        <span class="precoDoProduto">{{index.preco}}</span>
+                    </div>
+                    <span class="parcelas">6x sem juros</span>
+                    <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
                 </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
             </div>
+
         </div>
-
-
-
-        <div id="card" class="card">
-            <div class="imgAcessorios">
-                <img src="assets/img/produtos/xiaomiMi10Ultra.png">
-            </div>
-            <div class="cardTexto">
-                <span id="product" class="nomeDoProduto">Mi 10T Ultra</span>
-                <div class="promoPreco">
-                    <span class="promo"></span>
-                    <span class="precoDoProduto">R$ 3.400,00</span>
-                </div>
-                <span class="parcelas"><i class="fab fa-cc-mastercard"></i> 3x sem juros</span>
-                <a id="btnBuy" class="btnBuy" href="#card">Comprar</a>
-            </div>
-        </div>
-
-
-
     </div>
+
 </div>
