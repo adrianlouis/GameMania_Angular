@@ -1,0 +1,24 @@
+<div class="bannerAngular">
+
+    <div class="bannerImg" *ngIf="numero === 1">
+        <img  src="assets/img/banners/banner1.jpg" >
+    </div>
+    <div class="bannerImg" *ngIf="numero === 2">
+        <img  src="assets/img/banners/banner2.jpg" >
+    </div>
+    <div class="bannerImg" *ngIf="numero === 3">
+        <img  src="assets/img/banners/banner3.jpg" >
+    </div>
+    
+    <div style="text-align: center; background-color: black; padding-top: 10px;">
+        <span [ngClass]="{'dotChange': selectIndex == 1, 'dot': selectIndex != 1}" (click)="dotOne()"  class="dot"></span>
+        <span [ngClass]="{'dotChange': selectIndex == 2, 'dot': selectIndex != 2}" (click)="dotTwo()" class="dot"></span>
+        <span [ngClass]="{'dotChange': selectIndex == 3, 'dot': selectIndex != 3}" (click)="dotThree()" class="dot"></span>
+    </div>
+
+</div>
+
+
+<!-- <div class="bannerImg">
+    <img src="assets/img/banners/banner2.jpg" >
+</div> -->

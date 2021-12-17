@@ -1,0 +1,144 @@
+footer{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 1),rgba(50, 50, 50, 1),rgba(50, 50, 50, 1), rgba(0, 0, 0, 0) );
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.footerTop{
+width: 100%;
+text-align: center;
+border-bottom: 1px solid #aaa;
+padding-bottom: 20px;
+}
+.footerMid{
+    width: 33%;
+    height: 200px;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 900;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footerLeft{
+    width: 33%;
+    height: 100%;
+    height: 100%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.footerRight{
+    width: 33%;
+    height: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.footerBot{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    align-items: flex-start;
+    padding: 20px 0;
+}
+.cnpj{
+    color: white;
+}
+.footerGame, .footerMania{
+    font-size: 4em;
+    color: white;
+    text-shadow: 0 0 10px white,
+    0 0 20px white,
+    0 0 40px white,
+    0 0 80px white,
+    0 0 160px white
+}
+.socialMediaIcons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.socialMediaIcons img{
+    height: 50px;
+    margin: 0 30px;
+}
+.footerLeft, .footerMid, .footerRight{
+    font-size: 1em;
+}
+.footerLeft span, .footerRight span{
+    
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 1em;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px 0;
+}
+.direitos{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: #aaa 1px solid;
+}
+.direitos span{
+    color: white;
+}
+.footerEndereco{
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 320px){
+    .footerGame, .footerMania{
+        font-size: 2em;
+    }
+    .footerBot{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerMid, .footerRight{
+        width: 95%;
+        margin: 15px;
+    }
+    .direitos{
+        height: unset;
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,134 @@
+.log{
+    width: 100vw;
+    min-height: 100vh;
+    background: url('/assets/img/banners/bglog.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.logForm{
+    background-color: rgba(0, 0, 0, 0.7);
+   margin: auto;
+   padding: 30px;
+   border: 1px solid white;
+   width: 60vw;
+   margin:30px auto;
+   position: relative;
+}
+
+.containerNewsletter{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 35vw;
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+button{
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: crimson;
+    color: white;
+    height: 40px;
+}
+
+.barraTxtSm{
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.barraDivisoriaDeSecao{
+    display: grid;
+    grid-template-rows: auto;
+    margin-bottom: 50px;
+    justify-content: center;
+    margin-top: unset;
+    border-top: unset;
+    text-align: center;
+}
+
+.continputSearch{
+    display: none;
+}
+
+.cadastroLogin{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.spanCinza{
+width: 50vw;
+border-bottom: 2px solid white;
+background-color: rgba(0, 0, 0, 0.8);
+cursor: pointer;
+}
+
+.spanBold{
+font-weight: 700;
+border-top: 2px solid white;
+border-left: 2px solid white;
+width: 50vw;
+cursor: default;
+}
+
+.spanBold2{
+font-weight: 700;
+border-top: 2px solid white;
+border-right: 2px solid white;
+width: 50vw;
+cursor: default;
+}
+button{
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 768px){
+
+
+
+
+}
+
+@media only screen and (max-width: 320px){
+.log{
+    height: unset;
+}
+.logForm{
+    width: 100%;
+    border: unset;
+}
+
+.barraTxt{
+    font-size: 2.2rem;
+}
+
+.barraTxtSm{
+    text-align: center;
+}
+
+form{
+    margin-top: 115px;
+}
+
+.containerNewsletter{
+    width: unset;
+}
+
+input{
+width: 80vw;
+}
+
+}
+

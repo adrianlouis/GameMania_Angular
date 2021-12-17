@@ -1,0 +1,58 @@
+<div class="log">
+    <div class="logForm" *ngIf="tabCadLog === 1">
+        <div class="cadastroLogin">
+            <span class="spanCinza" (click)= "tab()" >Cadastro</span>
+            <span class="spanBold">Login</span>
+        </div>
+
+        <div class="barraDivisoriaDeSecao">
+            <span class="barraTxt">Login</span>
+            <span class=barraTxtSm>Faça o login para realizar suas compras ou ter acesso ao seu perfil.</span>
+        </div>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <div class="containerNewsletter">
+
+                <label for="email">Email: </label>
+                <input class=inputNome type="email" id="email" name="email" [(ngModel)]="loginModel.email">
+
+                <label for="senha">Senha: </label>
+                <input type="password" id="senha" name="senha" [(ngModel)]="loginModel.password">
+
+                <button type="submit">Fazer Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="logForm" *ngIf="tabCadLog === 2">
+        <div class="cadastroLogin">
+            <span class="spanBold2">Cadastro</span>
+            <span class="spanCinza" (click)="tab2()" >Login</span>
+        </div> 
+
+        <div class="barraDivisoriaDeSecao">
+            <span class="barraTxt">Cadastro</span>
+            <span class=barraTxtSm>Preencha os campos abaixo para criar sua conta.</span>
+        </div>
+        <form >
+
+            <div class="containerNewsletter">
+
+                <label for='userName'>Nome de Usuário</label>
+                <input class="inputNome" type="text" id="userName" required>
+
+                <label for="email">Email: </label>
+                <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="loginModel.email" required>
+                
+                <label for="senha">Senha: </label>
+                <input type="password" id="senha" name="senha" [(ngModel)]="loginModel.password" required>
+
+                <label for="email">Confirme a Senha: </label>
+                <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="loginModel.email" required>
+                
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+
+    </div>
+</div>
