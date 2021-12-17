@@ -9,6 +9,8 @@
             <span class="barraTxt">Login</span>
             <span class=barraTxtSm>Faça o login para realizar suas compras ou ter acesso ao seu perfil.</span>
         </div>
+
+
         <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
 
             <div class="containerNewsletter">
@@ -22,7 +24,10 @@
                 <button type="submit">Fazer Login</button>
             </div>
         </form>
+        <p class="errorLogin" *ngIf=" mensagem != '' ">{{ mensagem }}</p>
     </div>
+
+
 
     <div class="logForm" *ngIf="tabCadLog === 2">
         <div class="cadastroLogin">
@@ -42,10 +47,10 @@
                 <input class="inputNome" type="text" id="userName" required>
 
                 <label for="email">Email: </label>
-                <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="loginModel.email" required>
+                <input class='inputNome' type="email" id="email" name="email"  required>
                 
                 <label for="senha">Senha: </label>
-                <input type="password" id="senha" name="senha" [(ngModel)]="loginModel.password" required>
+                <input type="password" id="senha" name="senha" required>
 
                 <label for="email">Confirme a Senha: </label>
                 <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="loginModel.email" required>

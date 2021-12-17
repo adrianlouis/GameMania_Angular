@@ -17,6 +17,7 @@ import { LogComponent } from './views/log/log.component';
 import { LancamentoComponent } from './views/lancamento/lancamento.component';
 import { PrevendaComponent } from './views/prevenda/prevenda.component';
 import { LojaComponent } from './views/loja/loja.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LojaComponent } from './views/loja/loja.component';
     LancamentoComponent,
     PrevendaComponent,
     LojaComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
