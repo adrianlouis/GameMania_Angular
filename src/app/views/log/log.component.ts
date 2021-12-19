@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Login } from 'src/app/models/login';
 import { User } from 'src/app/models/user';
@@ -12,10 +13,25 @@ import { LoginService } from 'src/app/services/login.service';
 export class LogComponent implements OnInit {
 
   tabCadLog: number = 1;
+  s: number = 5;
+  toogleLogin: number = 1;
+
 
   constructor(private router: Router , private loginService: LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  loginCerto(){
+    let time = setInterval(()=>{
+      if (this.s !== 0){
+        console.log(this.s);
+        this.s--;
+      }else{
+        clearInterval;
+        this.router.navigateByUrl("/loja")
+      }
+    }, 1000)
   }
 
   tab(){
@@ -31,13 +47,22 @@ export class LogComponent implements OnInit {
   userModel = new User("louis@email.com", "krad")
 
   mensagem = "";
-
+  
   onSubmit() {
     console.log(this.loginModel)
     // o response abaixo é apenas uma var 
     this.loginService.login(this.loginModel).subscribe( (response) => {
-      this.mensagem = "Login com sucesso!";
-      this.router.navigateByUrl("/loja")
+      let time = setInterval(()=>{
+        if (this.s !== 0){
+          this.mensagem= "Você está logado e será redirecionado em "+this.s+" segundos."
+          this.s--;
+        }else{
+          clearInterval;
+          this.toogleLogin = 2;
+          this.router.navigateByUrl("/loja")
+        }
+      }, 1000)
+
       console.log(response)
     }, (error => {
       console.log(error.error)
@@ -45,13 +70,12 @@ export class LogComponent implements OnInit {
       if (error.error === "Cannot find user"){
        this.mensagem ="Usuário não encontrado"
       }else if(error.error === "Incorrect password"){
-        this.mensagem = "Senha errada"
+        this.mensagem = "Senha inválida"
+      }else if(error.error = "Password is too short"){
+        this.mensagem = "Senha muito curta"
       }else{
         this.mensagem = "Formato do email inválido"
       }
-
-      
     }))
   }
-  
 }
