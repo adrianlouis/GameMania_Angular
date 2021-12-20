@@ -43,17 +43,5 @@
       "capa": "assets/img/capas/fifa22.jpg",
       "id": 6
     }
-  ],
-  "news": [
-    {
-      "id": 1,
-      "img": "assets/img/news/fifa19.jpg",
-      "desc": "O jogo Fifa 19 em breve estará fora do Game Pass e com ele, alguns outros jogos."
-    },
-    {
-      "id": 2,
-      "img": "assets/img/news/epicgames.png",
-      "desc": "Epic Games adiciona jogo retrô por streaming no catálogo."
-    }
   ]
 }

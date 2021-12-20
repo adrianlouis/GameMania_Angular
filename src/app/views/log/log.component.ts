@@ -49,6 +49,16 @@ export class LogComponent implements OnInit {
   mensagem = "";
   
   onSubmit() {
+
+    const blacklist: string[] = ["select ", "from ", "drop ", "or ", "having ", "group ", "by ", "insert ", "exec ", "\"", "\'", "#", "--", "*", ";"]
+
+    blacklist.forEach(palavra => {
+      if (this.loginModel.email?.toLowerCase().includes(palavra)){
+        this.mensagem= palavra + " não pode ser usado no campo de email.";
+        return;
+      }
+    })
+
     console.log(this.loginModel)
     // o response abaixo é apenas uma var 
     this.loginService.login(this.loginModel).subscribe( (response) => {
