@@ -11,37 +11,48 @@
       "id": 1,
       "titulo": "Diablo 2 Resurrected",
       "descricao": "R$ 270,00",
-      "capa": "assets/img/capas/diablo2.jpg"
+      "capa": "assets/img/capas/diablo2.jpg",
+      "desc": "Diablo II: Resurrected inclui todo o conteúdo de Diablo II e sua expansão épica Diablo II: Lord of Destruction®. Lute por cavernas geladas, tumbas horríveis cheias de abominações mortas-vivas e terras desertas congeladas até o cume frígido do Monte Arreat e detenha Baal, o Senhor da Destruição. Faça um inferno com todas as sete classes jogáveis de Diablo II e Lord of Destruction, incluindo o astuto Assassino, mestre das armadilhas e disciplinas das sombras, e o Druida selvagem, um metamorfo ousado e invocador que comanda a magia elemental primordial."
     },
     {
       "id": 2,
       "titulo": "Need For Speed Heat",
       "descricao": "R$ 150,00",
-      "capa": "assets/img/capas/nfsHeat.jpg"
+      "capa": "assets/img/capas/nfsHeat.jpg",
+      "desc": "Trabalhe de dia e arrisque tudo à noite no Need for Speed™ Heat, um jogo de corrida emocionante que coloca você lado a lado contra a polícia corrupta da cidade."
     },
     {
       "id": 3,
       "titulo": "Demon Slayer",
       "descricao": "R$ 200,00",
-      "capa": "assets/img/capas/demonSlayer.jpg"
+      "capa": "assets/img/capas/demonSlayer.jpg",
+      "desc": "Torne-se a lâmina que destrói demônios! No modo para um jogador, você trilha o caminho de Tanjiro Kamado, cuja família foi massacrada e a irmã transformada em um demônio. Vivencie a narrativa retratada no anime 'Demon Slayer: Kimetsu no Yaiba' e as batalhas de Tanjiro para restaurar a humanidade de Nezuko e enfrentar a ameaça demoníaca!"
     },
     {
       "id": 4,
       "titulo": "Far Cry 6",
       "descricao": "R$ 125,00",
-      "capa": "assets/img/capas/farcry6.jpg"
+      "capa": "assets/img/capas/farcry6.jpg",
+      "desc": "Bem-vindo a Yara, um paraíso tropical parado no tempo. Far Cry® 6 leva os jogadores ao mundo cheio de adrenalina de uma revolução moderna de guerrilha. Como ditador de Yara, Antón Castillo está empenhado em restaurar sua nação de volta à sua antiga glória por qualquer meio, com seu filho, Diego, obedientemente ao seu lado. Torne-se um guerrilheiro e destrua o regime deles."
     },
     {
       "id": 5,
       "titulo": "Elden Ring",
       "descricao": "R$ 325,00",
-      "capa": "assets/img/capas/eldenRing.jpg"
+      "capa": "assets/img/capas/eldenRing.jpg",
+      "desc": "ELDEN RING, desenvolvido pela FromSoftware, Inc. e pela BANDAI NAMCO Entertainment Inc., é uma aventura de RPG de ação e fantasia ambientada em um mundo criado por Hidetaka Miyazak e George R. R. Martin. O perigo e a descoberta estão à espreita em cada canto do maior jogo da FromSoftware até hoje."
     },
     {
       "titulo": "FIFA 22",
       "descricao": "R$ 275,00",
       "capa": "assets/img/capas/fifa22.jpg",
+      "desc": "Powered by Football™, o EA SPORTS ™ FIFA 22 deixa o jogo ainda mais real com avanços fundamentais de jogabilidade e uma nova temporada de inovações em todos os modos.",
       "id": 6
     }
+  ],
+  "detailGames":[
+    {"id": 1, "nome": "The Witcher", "estilo": "RPG"},
+    {"id": 2, "nome": "Need For Speed", "estilo": "Corrida"},
+    {"id": 3, "nome": "Mortal Kombat", "estilo": "Luta"}
   ]
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContatoComponent } from './views/contato/contato.component';
+import { DetalhesComponent } from './views/detalhes/detalhes.component';
 import { HomeComponent } from './views/home/home.component';
 import { LancamentoComponent } from './views/lancamento/lancamento.component';
 import { LogComponent } from './views/log/log.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "lancamento", component: LancamentoComponent},
   { path: "prevenda", component: PrevendaComponent},
   { path: "loja", component: LojaComponent},
+  { path: "detalhes", component: DetalhesComponent},
   { path: "404", component: NotFoundComponent},
   { path: "**", redirectTo: "404"}
 

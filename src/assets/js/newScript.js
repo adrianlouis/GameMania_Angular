@@ -42,6 +42,7 @@ function closeBtn() {
     document.getElementById("menuHeader").style.opacity = 1;
 }
 
+
 // SUMIR/APARECER ICONES/BUSCAR NA DIREITA DO HEAD
 function search() {
     document.querySelector("#iconLupa").style.opacity = 0

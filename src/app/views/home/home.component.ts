@@ -12,7 +12,7 @@ import { NoticiaService } from 'src/app/services/noticia.service';
 export class HomeComponent implements OnInit {
 
   numero: number = 1;
- selectIndex = 1;
+  selectIndex = 1;
 
  public corre:any[] = [
   {nome: "Diablo 3", preco: "R$ 200,00", capa: "assets/img/capas/diablo.jpeg"},

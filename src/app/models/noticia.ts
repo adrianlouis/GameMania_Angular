@@ -3,4 +3,5 @@ export interface Noticia {
     titulo: string;
     descricao: string;
     capa: HTMLImageElement;
+    desc: string;
 }

@@ -29,7 +29,6 @@ export class PrevendaComponent implements OnInit {
   ]
 
  
-
   constructor() { }
 
   ngOnInit(): void {

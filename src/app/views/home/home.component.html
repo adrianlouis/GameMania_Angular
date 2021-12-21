@@ -206,7 +206,8 @@
 
                 <div *ngFor="let noticia of listaNoticias" id="card" class="card">
                     <div class="img">
-                        <a href="novoDetalhe.html?code=1">
+                        <!-- <a href="novoDetalhe.html?code=1"> -->
+                        <a routerLink="detalhes" >   
                             <img id="idCardImagem" [src]="noticia.capa">
                         </a>
                     </div>
@@ -217,9 +218,9 @@
                             <span class="precoDoProduto">{{ noticia.descricao }}</span>
                         </div>
                         <span class="parcelas"><i class="fas fa-sim-card"></i> 3x sem juros</span>
-                        <a id="btnBuy" href="novoDetalhe.html?arr=0&code=$1" class="btnBuy">Comprar</a>
+                        <!-- <a id="btnBuy" href="novoDetalhe.html?arr=0&code=$1" class="btnBuy">Comprar</a> -->
+                        <a id="btnBuy" [routerLink]="['/detalhes']" [queryParams]="{id: noticia.id }" class="btnBuy">Comprar</a>
                     </div>
-
 
                 </div>
 

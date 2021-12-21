@@ -59,6 +59,7 @@ export class LogComponent implements OnInit {
       }
     })
 
+
     console.log(this.loginModel)
     // o response abaixo é apenas uma var 
     this.loginService.login(this.loginModel).subscribe( (response) => {
