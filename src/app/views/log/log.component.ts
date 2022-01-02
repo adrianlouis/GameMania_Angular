@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
+import { Cadastro } from 'src/app/models/cadastro';
 import { Login } from 'src/app/models/login';
 import { User } from 'src/app/models/user';
+import { CadastroService } from 'src/app/services/cadastro.service';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -15,11 +16,39 @@ export class LogComponent implements OnInit {
   tabCadLog: number = 1;
   s: number = 5;
   toogleLogin: number = 1;
+  userLogado: string = ""
 
+  criarCad: Cadastro = {
+    name: "",
+    email: "",
+    password: "",
+    passwordB: ""
+  }
 
-  constructor(private router: Router , private loginService: LoginService) { }
+  constructor(private router: Router , private loginService: LoginService, private cadService: CadastroService) { }
 
   ngOnInit(): void {
+    if (this.toogleLogin = 2){
+      this.tabCadLog = 2;
+    }
+  }
+
+  cadastrar(){
+    if(this.criarCad.password !== this.criarCad.passwordB){
+      alert('Senhas não conferem')
+      return
+    }else if(this.criarCad.name == "" || this.criarCad.email == "" || this.criarCad.password == ""){
+      alert('Preencha os campos corretamente')
+      return
+    }else{
+    this.cadService.criarUser(this.criarCad).subscribe(()=>{
+      console.log(this.criarCad)
+      this.tabCadLog = 1;
+      this.userLogado = this.criarCad.name
+    
+    })
+  }
+
   }
 
   loginCerto(){
@@ -44,10 +73,13 @@ export class LogComponent implements OnInit {
 
   loginModel = new Login()
 
-  userModel = new User("louis@email.com", "krad")
+
+  userModel = new User("louis@email.com", "krad") 
 
   mensagem = "";
   
+
+
   onSubmit() {
 
     const blacklist: string[] = ["select ", "from ", "drop ", "or ", "having ", "group ", "by ", "insert ", "exec ", "\"", "\'", "#", "--", "*", ";"]
@@ -66,9 +98,14 @@ export class LogComponent implements OnInit {
       let time = setInterval(()=>{
         if (this.s !== 0){
           this.mensagem= "Você está logado e será redirecionado em "+this.s+" segundos."
+
+          // logica para amostrar o nome logado 
+          
+          // this.loginService.loged = this.loginModel.email
+
           this.s--;
         }else{
-          clearInterval;
+          clearInterval(time);
           this.toogleLogin = 2;
           this.router.navigateByUrl("/loja")
         }

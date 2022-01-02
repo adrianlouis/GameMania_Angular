@@ -1,0 +1,131 @@
+.titulo{
+    width: 95vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    margin: auto;
+    padding-bottom: 15px;
+}
+.spanPrimario{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.spanSecundario{
+    font-size: 1.5rem;
+}
+.leftMenu{
+    border: 1px solid green;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.plataforma{
+    border: 1px solid red;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+
+.botoes{
+    width: 90vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.botoes button, .botoes select{
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.iconBtn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: unset;
+}
+i{
+    color: #fff;
+    cursor: pointer;
+}
+.tabelaMP{
+    width: 90vw;
+    border-collapse: collapse;
+    margin: 50px 0;
+}
+.tabelaMP th{
+    font-size: 1.5rem;
+    background-color: #444;
+    height: 30px;
+}
+.tabelaMP td{
+    font-size: 1.2rem;
+    height: 40px;
+}
+.tabelaMP tr:nth-child(even){
+    background-color: #000;
+}
+.tabelaMP tr:hover{
+    background-color: #222;
+}
+.tabelaMP th, .tabelaMP td{
+    border: 1px solid gray;
+}
+.tabelaMP .addRoom{
+    background-color: #000;
+}
+.addRoom input{
+    width: 95%;
+    border: unset;
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+    color: white;
+}
+
+@media only screen and (max-width: 768px){
+    .spanPrimario{
+        font-size: 1.5rem;
+    }
+    .spanSecundario{
+        font-size: 1.0rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .spanPrimario{
+        font-size: 1.5rem;
+        margin: 10px 0;
+
+    }
+    .spanSecundario{
+        font-size: 1rem;
+    }
+    .tabelaMP{
+        width: 98vw;
+        margin: 10px 0;
+    }
+    .tabelaMP th{
+        font-size: 1rem;
+        background-color: #444;
+        height: 30px;
+    }
+    .tabelaMP td{
+        font-size: 0.8rem;
+        height: 40px;
+        padding: 0 1px;
+    }
+}

@@ -1,0 +1,79 @@
+<div class="titulo">
+    <span class="spanPrimario">Multiplayer</span>
+    <span class="spanSecundario">Marque suas partidas online ou marque presença em alguma já programada!
+        Divirta-se!</span>
+</div>
+
+<div class="container">
+
+    <div class="botoes" *ngIf="formCriarEvento == 0">
+        <button (click)="criarEvento()">Novo</button>
+        <select>
+            <option (click)="getCars()" >Filtrar</option>
+            <optgroup label="Plataforma"> 
+                <option (click)="getCars()" >Todos</option>
+                <option (click)="readByPlat(Xbox)" >Xbox</option>
+                <option (click)="readByPlat(Playstation)" >Playstation</option>
+                <option (click)="readByPlat(Nintendo)" >Nintendo</option>
+            </optgroup>
+        </select>
+        
+    </div>
+
+    <!-- <form *ngIf="formCriarEvento == 1" #multiplayerForm="ngForm" (ngSubmit)="onSubmit()" class="criar"> -->
+    <form [formGroup]="userForm" *ngIf="formCriarEvento == 1" #multiplayerForm="ngForm" class="criar">
+        <table class="tabelaMP">
+           <tr>
+               <th>Plataforma</th>
+               <th>Jogo</th>
+               <th>Data</th>
+               <th>Host</th>
+           </tr>
+           <tr>
+               <td class="addRoom">
+                   <select formControlName="plataforma" [(ngModel)]="multiplayer.plataforma" id="plataforma" name="plataforma" ng-change="onChange()">
+                       <option value="Xbox">Xbox</option>
+                       <option value="Playstation">Playstation</option>
+                       <option value="Nintendo">Nintendo</option>
+                   </select>
+            </td>
+               <td class="addRoom"><input formControlName="game" [(ngModel)]="multiplayer.game" id="game" name="game" type="text"  required></td>
+               <td class="addRoom"><input formControlName="data" [(ngModel)]="multiplayer.data" id="data" name="data" type="date" required></td>
+               <td class="addRoom"><input formControlName="host" [(ngModel)]="multiplayer.host" id="host" name="host" type="text" value=required></td>
+           </tr>
+
+        </table>
+
+        <div class="botoes">
+            <button *ngIf="addEdt == 0" type="submit" (click)="onSubmit()">Adicionar</button>
+            <button *ngIf="addEdt == 1" type="submit" (click)="update()">Editar</button>
+            <button type="button" (click)=criarEvento()>Cancelar</button>
+        </div>
+
+    </form>
+
+
+
+    <table #tabela *ngIf="formCriarEvento == 0" class="tabelaMP">
+        <tr>
+            <th>Plataforma</th>
+            <th>Jogo</th>
+            <th>Data</th>
+            <th>Host</th>
+            <th>Ações</th>
+        </tr>
+      
+        <tr *ngFor=" let i of multiplay">
+            <td >{{ i.plataforma }}</td>
+            <td >{{ i.game }}</td>
+            <td>{{ i.data }}</td>
+            <td>{{ i.host }}</td>
+            <td>
+                <button class="iconBtn" type="button" (click)="deletarUser(i.id)" ><i class="fa fa-trash fa-2x" aria-hidden="true"></i></button>
+                <button class="iconBtn" type="button" (click)="editar(i.id, i.game, i.data, i.host, i.plataforma)" [routerLink]="['/multiplayer', i.id]" ><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></button>
+            </td>
+            
+        </tr>
+       
+    </table>
+</div>

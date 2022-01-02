@@ -32,6 +32,8 @@
 // })
 
 // FUNÇÃO DO MENU DO HEADER 
+
+
 function openMenu() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("menuHeader").style.opacity = 0;

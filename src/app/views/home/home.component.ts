@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { Noticia } from 'src/app/models/noticia';
 import { User } from 'src/app/models/user';
+import { LoginService } from 'src/app/services/login.service';
 import { NoticiaService } from 'src/app/services/noticia.service';
 
 @Component({
@@ -83,6 +84,10 @@ constructor(private noticiaService: NoticiaService) { }
 
   onSubmit() {
     console.log(this.userModel)
+  }
+
+  teste(){
+  
   }
 }
 

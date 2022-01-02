@@ -27,6 +27,7 @@
         <p class="errorLogin" *ngIf=" mensagem != '' ">{{ mensagem }}</p>
     </div>
 
+    
     <div class="logForm" *ngIf="tabCadLog === 2">
         <div class="cadastroLogin">
             <span class="spanBold2">Cadastro</span>
@@ -37,23 +38,23 @@
             <span class="barraTxt">Cadastro</span>
             <span class=barraTxtSm>Preencha os campos abaixo para criar sua conta.</span>
         </div>
-        <form >
+        <form #cadForm="ngForm">
 
             <div class="containerNewsletter">
 
                 <label for='userName'>Nome de Usuário</label>
-                <input class="inputNome" type="text" id="userName" required>
+                <input class="inputNome" type="text" id="nome" name="nome" [(ngModel)]="criarCad.name" required>
 
                 <label for="email">Email: </label>
-                <input class='inputNome' type="email" id="email" name="email"  required>
+                <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="criarCad.email" required>
                 
                 <label for="senha">Senha: </label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" [(ngModel)]="criarCad.password" required>
 
-                <label for="email">Confirme a Senha: </label>
-                <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="loginModel.email" required>
+                <label for="email">Confirme a Senha : </label>
+                <input class='inputNome' type="text" id="senhaC" name="senhaC" [(ngModel)]="criarCad.passwordB" required>
                 
-                <button type="submit">Cadastrar</button>
+                <button type="submit" (click)="cadastrar()">Cadastrar</button>
             </div>
         </form>
 

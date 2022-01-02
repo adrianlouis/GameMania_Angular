@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-loja',
@@ -51,9 +52,12 @@ export class LojaComponent implements OnInit {
     {img: "assets/img/capas/gtaV.jpg", nome: "Grand Theft Auto V", preco: "R$ 130,00"},
   ]
 
-  constructor() { }
+  constructor(private login: LoginService) { }
+
+  nomeLogado: string = ""
 
   ngOnInit(): void {
+    this.nomeLogado = this.login.loged
   }
 
 }

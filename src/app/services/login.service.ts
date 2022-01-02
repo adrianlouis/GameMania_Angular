@@ -8,6 +8,9 @@ import { Login } from '../models/login';
 })
 export class LoginService {
 
+  loged: any = ""
+
+
   url = "http://localhost:3000/login";
 
   constructor(private httpClient: HttpClient) {}
@@ -23,5 +26,11 @@ export class LoginService {
       observe: 'response'
     })
   }
+
+  criarUser(cadastro: Login): Observable<Login>{
+    return this.httpClient.post<Login>(this.url, cadastro)
+  }
+
+
 
 }

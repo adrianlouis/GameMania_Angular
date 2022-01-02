@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  ola: string = "ola";
+export class AppComponent implements OnInit {
 
-  myScriptElement: HTMLScriptElement;
-  constructor(){
-   this.myScriptElement = document.createElement("script");
-   this.myScriptElement.src = "assets/js/newScript.js";
-    document.body.appendChild(this.myScriptElement);
+  faCoffee = faCoffee
+
+  constructor(){}
+
+  ngOnInit(): void {
   }
-  title = 'Game Mania';
+
 
 }

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
@@ -19,6 +20,8 @@ import { PrevendaComponent } from './views/prevenda/prevenda.component';
 import { LojaComponent } from './views/loja/loja.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { DetalhesComponent } from './views/detalhes/detalhes.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { MultiplayerComponent } from './views/multiplayer/multiplayer.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +40,17 @@ import { DetalhesComponent } from './views/detalhes/detalhes.component';
     LojaComponent,
     NotFoundComponent,
     DetalhesComponent,
+    CadastroComponent,
+    MultiplayerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    FontAwesomeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
