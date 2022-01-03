@@ -39,6 +39,20 @@ export class DetalhesComponent implements OnInit {
     } )
   }
 
+  consultaCep(valor: any, form: any){
+   this.detalheService.buscar(valor).subscribe((dados)=> this.populaForm(dados, form));
+  }
+
+  populaForm(dados:any, form:any){
+    form.setValue({
+      cep: dados.cep,
+      logradouro: dados.logradouro,
+      cidade: dados.localidade,
+      bairro: dados.bairro,
+      uf: dados.uf
+    })
+  }
+
   
 
 

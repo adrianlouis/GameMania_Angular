@@ -20,6 +20,28 @@
     margin-left: 50px;
     /* height: 600px; */
 }
+.cepForm{
+    width: 70vw;
+    margin: auto;
+}
+.formCep{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    font-weight: 700;
+    width: 70%;
+    text-align: center;
+}
+input:disabled{
+   color: #000;
+    background-color: #bbb;
+}
+
 /* .descricao a{
     text-decoration: none;
 } */
