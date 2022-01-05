@@ -107,6 +107,8 @@ export class LogComponent implements OnInit {
         }else{
           clearInterval(time);
           this.toogleLogin = 2;
+          this.loginService.logado == 1
+          
           this.router.navigateByUrl("/loja")
         }
       }, 1000)

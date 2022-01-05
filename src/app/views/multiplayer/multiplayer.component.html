@@ -9,9 +9,9 @@
     <div class="botoes" *ngIf="formCriarEvento == 0">
         <button (click)="criarEvento()">Novo</button>
         <select>
-            <option (click)="getCars()" >Filtrar</option>
+            <option (click)="mostrar()" >Filtrar</option>
             <optgroup label="Plataforma"> 
-                <option (click)="getCars()" >Todos</option>
+                <option (click)="mostrar()" >Todos</option>
                 <option (click)="readByPlat(Xbox)" >Xbox</option>
                 <option (click)="readByPlat(Playstation)" >Playstation</option>
                 <option (click)="readByPlat(Nintendo)" >Nintendo</option>

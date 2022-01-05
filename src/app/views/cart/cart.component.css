@@ -1,0 +1,25 @@
+table{
+    width: 90vw;
+}
+
+th, td, tr {
+    border:1px solid #ffffff;
+    text-align: center;
+}
+.tbCapa{
+    width: 110px;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.tbCapa img{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.tabelaItens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}

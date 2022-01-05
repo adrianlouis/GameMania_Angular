@@ -16,29 +16,28 @@ export class MultiplayerService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
+
+  //Insere uma linha na tabela com os dados fornecidos nos inputs
   criar(criar: Multiplayer): Observable<Multiplayer>{
     return this.http.post<Multiplayer>(this.url, JSON.stringify(criar), this.httpOptions)
   }
 
-  //getCars
+
+  //Lista na tabela todos os eventos marcados que foram criados
   read(): Observable<Multiplayer[]>{
     return this.http.get<Multiplayer[]>(this.url)
   }
 
-  //Obter item pelo ID
-  readById(id: string): Observable<Multiplayer[]> {
-    return this.http.get<Multiplayer[]>(`${this.url}/${id}`);
-  }
-
-  readByPlat(plataforma: string): Observable<Multiplayer[]>{
-    return this.http.get<Multiplayer[]>(`${this.url}/?plataforma=${plataforma}`)
-    // http://localhost:3000/multiplayer/?host=Adrian
-  }
-
-  // del(deletar: Multiplayer){
-  //   return this.http.delete<Multiplayer>(this.url+'/'+deletar.id, this.httpOptions)
+  // readById(id: string): Observable<Multiplayer[]> {
+  //   return this.http.get<Multiplayer[]>(`${this.url}/${id}`);
   // }
 
+  //Usado no Filtro por Plataforma
+  readByPlat(plataforma: string): Observable<Multiplayer[]>{
+    return this.http.get<Multiplayer[]>(`${this.url}/?plataforma=${plataforma}`)
+  }
+  
+  //Usado para editar itens da tabela
   update(id: string, user: Multiplayer):Observable<Multiplayer>{
     return this.http.put<Multiplayer>(`${this.url}/${id}`, user, this.httpOptions)
   }
@@ -46,9 +45,6 @@ export class MultiplayerService {
   updateForm(id: string, user: Multiplayer): Observable<Multiplayer>{
     return this.http.put<Multiplayer>(`${this.url}/${id}`, user)
   }
-  // update(id: string, user: Multiplayer):Observable<Multiplayer>{
-  //   return this.http.put<Multiplayer>(`${this.url}/${id}`, user, this.httpOptions)
-  // }
 
   deletarUser(id: string):Observable<Multiplayer>{
     return this.http.delete<Multiplayer>(`${this.url}/${id}`)

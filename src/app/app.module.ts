@@ -22,6 +22,7 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 import { DetalhesComponent } from './views/detalhes/detalhes.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { MultiplayerComponent } from './views/multiplayer/multiplayer.component';
+import { CartComponent } from './views/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { MultiplayerComponent } from './views/multiplayer/multiplayer.component'
     DetalhesComponent,
     CadastroComponent,
     MultiplayerComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

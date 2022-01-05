@@ -9,7 +9,7 @@ import { Login } from '../models/login';
 export class LoginService {
 
   loged: any = ""
-
+  logado: number = 0;
 
   url = "http://localhost:3000/login";
 

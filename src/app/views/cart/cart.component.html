@@ -1,0 +1,24 @@
+<h1>Carrinho</h1>
+
+<h2 (click)="onClick()">Itens</h2>
+
+<div class="tabelaItens">
+
+    <table>
+        <tr>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Remover</th>
+        </tr>
+
+        <tbody *ngFor=" let i of itens">
+            <tr>
+                <td class="tbCapa"><img src='{{i.capa}}'></td>
+                <td>{{i.titulo}}</td>
+                <td>R$ {{i.descricao}}</td>
+                <td><i class="fa fa-trash fa-2x" aria-hidden="true"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

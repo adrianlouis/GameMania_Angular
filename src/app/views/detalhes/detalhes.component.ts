@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Noticia } from 'src/app/models/noticia';
+import { CartService } from 'src/app/services/cart.service';
 import { DetalhesService } from 'src/app/services/detalhes.service';
 import { NoticiaService } from 'src/app/services/noticia.service';
 
@@ -22,7 +23,9 @@ export class DetalhesComponent implements OnInit {
   resultadoDesc: any = "";
   idUrl: any ="";
 
-  constructor(private detalheService: DetalhesService, private _route: ActivatedRoute, private noticiaService: NoticiaService) { }
+  item: any = ""
+
+  constructor(private detalheService: DetalhesService, private _route: ActivatedRoute, private noticiaService: NoticiaService, private cart: CartService) { }
 
   ngOnInit(): void {
     this.idUrl = this.param = this._route.snapshot.queryParamMap.get('id');
@@ -53,6 +56,12 @@ export class DetalhesComponent implements OnInit {
     })
   }
 
+  addCart(){
+    this.idUrl = this._route.snapshot.queryParamMap.get('id');
+
+    this.cart.itemAdicionado.push(this.resultadoArrayJson[this.idUrl-1])
+    console.log(this.cart.itemAdicionado)
+  }
   
 
 

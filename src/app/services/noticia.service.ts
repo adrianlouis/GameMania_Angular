@@ -23,4 +23,13 @@ export class NoticiaService {
   getNoticias(): Observable<Noticia[]>{
     return this.httpClient.get<Noticia[]>(this.url)
   }
+
+  //Pegar um item
+  getByUnit(id: string): Observable<Noticia[]>{
+    return this.httpClient.get<Noticia[]>(`${this.url}/${id}`);
+  }
+
+    // readById(id: string): Observable<Multiplayer[]> {
+  //   return this.http.get<Multiplayer[]>(`${this.url}/${id}`);
+  // }
 }
