@@ -48,7 +48,7 @@
                             <span class="precoDoProduto">{{ index.preco }}</span>
                         </div>
 
-                        <span  class="parcelas cart"><i id="cart" class="fa fa-shopping-cart " aria-hidden="true"></i></span>>
+                        <span [ngClass]="{ red: likeCart == 1}" (click)= "like()"  class="parcelas cart"><i id="cart" class="fa fa-shopping-cart " aria-hidden="true"></i></span>>
 
 
                         <a id="btnBuy" href="novoDetalhe.html?arr=0&code=1" class="btnBuy">Comprar</a>

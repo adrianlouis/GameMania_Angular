@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   numero: number = 1;
   selectIndex = 1;
   likeCart: number = 0;
-  classchange:number = 0
   
 
  public corre:any[] = [
@@ -92,21 +91,20 @@ constructor(private noticiaService: NoticiaService) { }
     console.log(this.userModel)
   }
 
-  // cart(t){
-  //   if (t.event.target.likeCart == 0){
-  //   t.event.target.likeCart = 1;
-  // }else{
-  //   t.event.target.likeCart = 0;
-  // }}
+  like (){
+    if (this.likeCart == 0){
+      this.likeCart = 1
+    }else{
+      this.likeCart = 0
+    }
+
+  }
 
 
-//  cart(t:any){
-//   //  t.classList.add('red')
-// t.target.style.display= "none"
-// }
+
+  }
 
 
-}
 
 
 
