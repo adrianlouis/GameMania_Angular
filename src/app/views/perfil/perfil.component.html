@@ -1,0 +1,102 @@
+<div class="perfil">
+
+    <div class="leftSide">
+
+        <div class="nuMorph nuMorphNickname">
+           
+            <div class="nmDiv">
+                <span class="txtCenter" >Louis</span>
+            </div>
+         
+        </div>
+
+        <div class="nuMorph" (click)="cad()">
+            <div class="nmDiv">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="nmDiv">
+                <span>Cadastro</span>
+            </div>
+            <div class="nmDiv">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+            </div>
+        </div>
+
+        <div class="nuMorph" (click)="adr()">
+            <div class="nmDiv">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+            <div class="nmDiv">
+                <span>Endereço</span>
+            </div>
+            <div class="nmDiv">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="nuMorph" (click)="sMedia()">
+            <div class="nmDiv">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+
+            </div>
+            <div class="nmDiv">
+                <span>Redes Sociais</span>
+
+            </div>
+            <div class="nmDiv">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="rightSide">
+        <div *ngIf="control == 1" class="rCad">
+
+            <div class="rCadInner">
+
+
+
+                <div class="rCadRow">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email">
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha">
+                </div>
+                <div class="rCadRow">
+                    <label for="quote">Citação:</label>
+                    <input id="quoteInput" type="text">
+
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="control == 2" class="rCad">
+            <div class="rCadInner">
+                <div class="rCadRow">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep">
+
+                    <label for="logradouro">Endereço:</label>
+                    <input type="text" id="logradouro">
+
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade">
+
+                    <label for="uf">Estado:</label>
+                    <input type="text" id="uf">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="btnDiv">
+            <button type="button">Editar</button>
+            <button type="button">Excluir</button>
+        </div>
+
+    </div>
+</div>

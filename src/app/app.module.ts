@@ -23,6 +23,7 @@ import { DetalhesComponent } from './views/detalhes/detalhes.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { MultiplayerComponent } from './views/multiplayer/multiplayer.component';
 import { CartComponent } from './views/cart/cart.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { CartComponent } from './views/cart/cart.component';
     CadastroComponent,
     MultiplayerComponent,
     CartComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

@@ -25,105 +25,87 @@ export class LogComponent implements OnInit {
     passwordB: ""
   }
 
-  constructor(private router: Router , private loginService: LoginService, private cadService: CadastroService) { }
+  constructor(private router: Router, private loginService: LoginService, private cadService: CadastroService) { }
 
   ngOnInit(): void {
-    if (this.toogleLogin = 2){
+    if (this.toogleLogin = 2) {
       this.tabCadLog = 2;
     }
   }
 
-  cadastrar(){
-    if(this.criarCad.password !== this.criarCad.passwordB){
+  cadastrar() {
+    if (this.criarCad.password !== this.criarCad.passwordB) {
       alert('Senhas não conferem')
       return
-    }else if(this.criarCad.name == "" || this.criarCad.email == "" || this.criarCad.password == ""){
+    } else if (this.criarCad.name == "" || this.criarCad.email == "" || this.criarCad.password == "") {
       alert('Preencha os campos corretamente')
       return
-    }else{
-    this.cadService.criarUser(this.criarCad).subscribe(()=>{
-      console.log(this.criarCad)
-      this.tabCadLog = 1;
-      this.userLogado = this.criarCad.name
-    
-    })
-  }
+    } else {
+      this.cadService.criarUser(this.criarCad).subscribe(() => {
+        this.tabCadLog = 1;
+        this.userLogado = this.criarCad.name
+      })
+    }
 
   }
 
-  loginCerto(){
-    let time = setInterval(()=>{
-      if (this.s !== 0){
-        console.log(this.s);
+  loginCerto() {
+    let time = setInterval(() => {
+      if (this.s !== 0) {
         this.s--;
-      }else{
+      } else {
         clearInterval;
         this.router.navigateByUrl("/loja")
       }
     }, 1000)
   }
 
-  tab(){
+  tab() {
     this.tabCadLog = 2;
-    console.log(this.tabCadLog)
   }
-  tab2(){
+  tab2() {
     this.tabCadLog = 1;
   }
 
   loginModel = new Login()
 
 
-  userModel = new User("louis@email.com", "krad") 
+  userModel = new User("louis@email.com", "krad")
 
   mensagem = "";
-  
+
 
 
   onSubmit() {
 
-    const blacklist: string[] = ["select ", "from ", "drop ", "or ", "having ", "group ", "by ", "insert ", "exec ", "\"", "\'", "#", "--", "*", ";"]
+    const blacklist: string[] = ["select ", "from ", "drop ", "or ", "having ", "group ",
+     "by ", "insert ", "exec ", "\"", "\'", "#", "--", "*", ";"]
 
     blacklist.forEach(palavra => {
-      if (this.loginModel.email?.toLowerCase().includes(palavra)){
-        this.mensagem= palavra + " não pode ser usado no campo de email.";
+      if (this.loginModel.email?.toLowerCase().includes(palavra)) {
+        this.mensagem = palavra + " não pode ser usado no campo de email.";
         return;
       }
     })
-
-
-    console.log(this.loginModel)
-    // o response abaixo é apenas uma var 
-    this.loginService.login(this.loginModel).subscribe( (response) => {
-      let time = setInterval(()=>{
-        if (this.s !== 0){
-          this.mensagem= "Você está logado e será redirecionado em "+this.s+" segundos."
-
-          // logica para amostrar o nome logado 
-          
-          // this.loginService.loged = this.loginModel.email
-
+    this.loginService.login(this.loginModel).subscribe((response) => {
+      let time = setInterval(() => {
+        if (this.s !== 0) {
+          this.mensagem = "Você está logado e será redirecionado em " + this.s + " segundos."
           this.s--;
-        }else{
+        } else {
           clearInterval(time);
           this.toogleLogin = 2;
-          this.loginService.logado == 1
-          
           this.router.navigateByUrl("/loja")
         }
       }, 1000)
-
-      console.log(response)
     }, (error => {
-      console.log(error.error)
-
-      if (error.error === "Cannot find user"){
-       this.mensagem ="Usuário não encontrado"
-      }else if(error.error === "Incorrect password"){
+      if (error.error === "Cannot find user") {
+        this.mensagem = "Usuário não encontrado"
+      } else if (error.error === "Incorrect password") {
         this.mensagem = "Senha inválida"
-      }else if(error.error = "Password is too short"){
+      } else if (error.error = "Password is too short") {
         this.mensagem = "Senha muito curta"
-      }else{
+      } else {
         this.mensagem = "Formato do email inválido"
       }
     }))

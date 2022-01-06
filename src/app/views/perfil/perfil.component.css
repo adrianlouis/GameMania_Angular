@@ -1,0 +1,90 @@
+.perfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.leftSide{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.rightSide{
+    width: 75%;
+    border-radius: 20px;
+    /* border:1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
+    box-shadow: #333 0px 0px 10px;
+}
+.nuMorph{
+    border-radius: 20px;
+    /* border:1px solid gray; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all .3s;
+    margin: 20px;
+    box-shadow: #333 0px 0px 10px;
+
+}
+.nuMorphNickname{
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    background-color: rgb(6, 0, 87);
+    color: #fff;
+}
+.nuMorph:hover{
+    box-shadow:  #fff 0 0 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.nmDiv{
+    margin: 10px
+}
+
+.rCad{
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.rCad input{
+    width: 250px;
+}
+.rCad span{
+    font-size: 2rem;
+}
+.rCadInner{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: relative;
+}
+.rCadRow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#quoteInput{
+    height: 100px;
+width: 400px;
+}
+button{
+    width: 80px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;    
+}
+.txtCenter{
+    text-align: center;
+}

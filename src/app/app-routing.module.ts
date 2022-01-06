@@ -10,6 +10,7 @@ import { LogComponent } from './views/log/log.component';
 import { LojaComponent } from './views/loja/loja.component';
 import { MultiplayerComponent } from './views/multiplayer/multiplayer.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 import { PrevendaComponent } from './views/prevenda/prevenda.component';
 import { SobreComponent } from './views/sobre/sobre.component';
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: "multiplayer", component: MultiplayerComponent},
   { path: "multiplayer/:id", component: MultiplayerComponent},
   { path: "cart", component: CartComponent},
+  { path: "perfil", component: PerfilComponent},
   { path: "404", component: NotFoundComponent},
   { path: "**", redirectTo: "404"}
 
