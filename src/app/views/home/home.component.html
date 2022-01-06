@@ -40,13 +40,17 @@
                             <img id="idCardImagem" [src]="index.capa">
                         </a>
                     </div>
+
                     <div class="cardTexto">
-                        <span id="product" class="nomeDoProduto">{{ index.nome }}</span>
+                        <span id="product" class="nomeDoProduto" >{{ index.nome }}</span>
                         <div class="promoPreco">
                             <span class="promo"></span>
                             <span class="precoDoProduto">{{ index.preco }}</span>
                         </div>
-                        <span class="parcelas">até 6x sem juros</span>
+
+                        <span  class="parcelas cart"><i id="cart" class="fa fa-shopping-cart " aria-hidden="true"></i></span>>
+
+
                         <a id="btnBuy" href="novoDetalhe.html?arr=0&code=1" class="btnBuy">Comprar</a>
                     </div>
 
@@ -67,7 +71,7 @@
 
             <label for="email">Email: </label>
             <input class=inputNome type="email" id="email" name="email" [(ngModel)]="userModel.email">
-<!-- 
+            <!-- 
             <label for="senha">Senha: </label>
             <input type="password" id="senha" name="senha" [(ngModel)]="userModel.senha"> -->
 
@@ -197,7 +201,8 @@
         <div class="barraDivisoriaDeSecao">
             <span class="barraTxt">Multiplayer</span>
         </div>
-        <span class="spanNews">Aqui você pode marcar uma data para jogar seu jogo preferido com os seus amigos! É rápido e fácil! Mas se preferir, apenas escolha com quem quer jogar e se divertir bastante!</span>
+        <span class="spanNews">Aqui você pode marcar uma data para jogar seu jogo preferido com os seus amigos! É rápido
+            e fácil! Mas se preferir, apenas escolha com quem quer jogar e se divertir bastante!</span>
         <a class="link" routerLink="/multiplayer">Criar um evento multiplayer</a>
 
         <!-- BARRA MAIS VENDIDOS  -->
@@ -212,7 +217,7 @@
                 <div *ngFor="let noticia of listaNoticias" id="card" class="card">
                     <div class="img">
                         <!-- <a href="novoDetalhe.html?code=1"> -->
-                        <a routerLink="detalhes" >   
+                        <a routerLink="detalhes">
                             <img id="idCardImagem" [src]="noticia.capa">
                         </a>
                     </div>
@@ -223,7 +228,8 @@
                             <span class="precoDoProduto">{{ noticia.descricao }}</span>
                         </div>
                         <span class="parcelas"><i class="fas fa-sim-card"></i> 3x sem juros</span>
-                        <a id="btnBuy" [routerLink]="['/detalhes']" [queryParams]="{id: noticia.id }" class="btnBuy">Comprar</a>
+                        <a id="btnBuy" [routerLink]="['/detalhes']" [queryParams]="{id: noticia.id }"
+                            class="btnBuy">Comprar</a>
                     </div>
 
                 </div>

@@ -6,7 +6,21 @@
     font-size: 1.5rem;
     margin: auto;
 }
-
+.cart, .cartRed{
+    color: #aaa;
+    font-size: 2rem;
+    transition: all .5s;
+}
+.cart:hover{
+    text-shadow: #f55 0 0 5px;
+    color: #f55;
+}
+.cartRed{
+    color: #f55;
+}
+.active{
+    color: aqua;
+}
 .link{
     font-size: 3rem;
     text-decoration: none;
@@ -15,6 +29,10 @@
 }
 .link:hover{
     color: #f55;
+}
+
+.red{
+    color: red;
 }
 
 .barraTxtSm{

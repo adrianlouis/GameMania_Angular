@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
 
   numero: number = 1;
   selectIndex = 1;
+  likeCart: number = 0;
+  classchange:number = 0
+  
 
  public corre:any[] = [
   {nome: "Diablo 3", preco: "R$ 200,00", capa: "assets/img/capas/diablo.jpeg"},
@@ -38,6 +41,10 @@ constructor(private noticiaService: NoticiaService) { }
 
   ngOnInit(): void {
     this.carregarNoticia();
+
+    window.onclick = e => {
+      console.log(e.target)
+    }
 
     let a = interval(5000);
    var z: number = 1;
@@ -85,8 +92,28 @@ constructor(private noticiaService: NoticiaService) { }
     console.log(this.userModel)
   }
 
-  teste(){
-  
-  }
+  // cart(t){
+  //   if (t.event.target.likeCart == 0){
+  //   t.event.target.likeCart = 1;
+  // }else{
+  //   t.event.target.likeCart = 0;
+  // }}
+
+
+//  cart(t:any){
+//   //  t.classList.add('red')
+// t.target.style.display= "none"
+// }
+
+
 }
+
+
+
+
+
+
+
+
+
 
