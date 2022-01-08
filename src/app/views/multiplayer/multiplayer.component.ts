@@ -73,6 +73,8 @@ export class MultiplayerComponent implements OnInit {
       })
   }
 
+
+
   onChange() {
     this.value = this.multiplayer.plataforma;
   }
@@ -99,6 +101,8 @@ export class MultiplayerComponent implements OnInit {
         this.multiplay = multiplay;
       })
   }
+
+ 
 
   editar(id: string, game: string, data: Date, host: string, plataforma: string) {
     this.deletar = { id, game, plataforma, host, data }

@@ -34,22 +34,21 @@
             <div id="destaque" class="contJogosDest">
 
 
-                <div *ngFor="let index of corre" id="card" class="card">
+                <div *ngFor="let c of corre; let i = index" id="card" class="card">
                     <div class="img">
                         <a href="novoDetalhe.html?code=1">
-                            <img id="idCardImagem" [src]="index.capa">
+                            <img id="idCardImagem" [src]="c.capa">
                         </a>
                     </div>
 
                     <div class="cardTexto">
-                        <span id="product" class="nomeDoProduto" >{{ index.nome }}</span>
+                        <span id="product" class="nomeDoProduto" >{{ c.nome }}</span>
                         <div class="promoPreco">
                             <span class="promo"></span>
-                            <span class="precoDoProduto">{{ index.preco }}</span>
+                            <span class="precoDoProduto">{{ c.preco }}</span>
                         </div>
 
-                        <span [ngClass]="{ red: likeCart == 1}" (click)= "like()"  class="parcelas cart"><i id="cart" class="fa fa-shopping-cart " aria-hidden="true"></i></span>>
-
+                        <span id="ident{{c.id}}" (click)= "wishlist(c.id)"  class="parcelas cart"><i id="cart" class="fa fa-shopping-cart " aria-hidden="true"></i></span>>
 
                         <a id="btnBuy" href="novoDetalhe.html?arr=0&code=1" class="btnBuy">Comprar</a>
                     </div>
@@ -71,10 +70,7 @@
 
             <label for="email">Email: </label>
             <input class=inputNome type="email" id="email" name="email" [(ngModel)]="userModel.email">
-            <!-- 
-            <label for="senha">Senha: </label>
-            <input type="password" id="senha" name="senha" [(ngModel)]="userModel.senha"> -->
-
+         
             <button type="submit">Enviar</button>
         </div>
     </form>
@@ -227,7 +223,8 @@
                             <span class="promo"></span>
                             <span class="precoDoProduto">{{ noticia.descricao }}</span>
                         </div>
-                        <span class="parcelas"><i class="fas fa-sim-card"></i> 3x sem juros</span>
+
+                        <span id="idJson{{noticia.id}}" [ngClass]="{'red': noticia.boolean == true}" (click)= "pegarCard(noticia.id)"  class="parcelas cart"><i id="cart" class="fa fa-shopping-cart " aria-hidden="true"></i></span>    
                         <a id="btnBuy" [routerLink]="['/detalhes']" [queryParams]="{id: noticia.id }"
                             class="btnBuy">Comprar</a>
                     </div>

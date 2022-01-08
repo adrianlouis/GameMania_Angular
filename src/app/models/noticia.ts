@@ -1,7 +1,8 @@
 export interface Noticia {
-    id: number;
+    id: string;
     titulo: string;
     descricao: string;
     capa: HTMLImageElement;
     desc: string;
+    boolean: boolean;
 }

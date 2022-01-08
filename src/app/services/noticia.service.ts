@@ -8,6 +8,9 @@ import { Noticia } from '../models/noticia';
 })
 export class NoticiaService {
 
+  wishlist: any [] = []
+
+
   // Variavel criada para armazenar o endereço da API
   url = "http://localhost:3000/noticias";
 
@@ -29,6 +32,19 @@ export class NoticiaService {
     return this.httpClient.get<Noticia[]>(`${this.url}/${id}`);
   }
 
+
+  // atualizar(card: Noticia): Observable<Noticia>{
+  //   return this.httpClient.put<Noticia>(this.url+'/'+card.id, JSON.stringify(card), this.httpOptions)
+  // }
+
+  attBool(id: string, boolean: any): Observable<Noticia>{
+    return this.httpClient.patch<Noticia>(`${this.url}/${id}`, boolean, this.httpOptions)
+  }
+
+  // atualizar(id:string): Observable<Noticia>{
+  //   return this.httpClient.patch<Noticia>(this.url+'/'+id, JSON.stringify(id), this.httpOptions)
+  
+  // }
     // readById(id: string): Observable<Multiplayer[]> {
   //   return this.http.get<Multiplayer[]>(`${this.url}/${id}`);
   // }

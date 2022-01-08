@@ -1,6 +1,6 @@
 <h1>Carrinho</h1>
 
-<h2 (click)="onClick()">Itens</h2>
+<h2 >Itens</h2>
 
 <div class="tabelaItens">
 
@@ -12,9 +12,10 @@
             <th>Remover</th>
         </tr>
 
-        <tbody *ngFor=" let i of itens">
+        <tbody *ngFor=" let i of storaged">
             <tr>
                 <td class="tbCapa"><img src='{{i.capa}}'></td>
+                <!-- <td>{{i.titulo}}</td> -->
                 <td>{{i.titulo}}</td>
                 <td>R$ {{i.descricao}}</td>
                 <td><i class="fa fa-trash fa-2x" aria-hidden="true"></i></td>

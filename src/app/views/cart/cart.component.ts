@@ -13,12 +13,25 @@ export class CartComponent implements OnInit {
 
   itens: any
 
+  wishlist: any [] = []
+
+  storaged:any
+
   ngOnInit(): void {
     this.itens = this.cart.itemAdicionado
+
+    // this.wishlist = this.produtos.wishlist
+
+    // console.log(this.produtos.wishlist)
+
+ 
+
   }
 
-  onClick(){
-    console.log(this.itens)
-  }
+  // onClick(){
+  //   console.log(this.itens)
+  // }
+
+  
 
 }
