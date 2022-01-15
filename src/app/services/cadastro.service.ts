@@ -18,4 +18,8 @@ export class CadastroService {
   criarUser(cadastro: Cadastro): Observable<Cadastro>{
     return this.http.post<Cadastro>(this.url, cadastro)
   }
+
+  buscarUm(email: string):Observable<Cadastro[]>{
+    return this.http.get<Cadastro[]>(`${this.url}/?name=${email}`)
+  }
 }

@@ -60,20 +60,7 @@
         </div>
     </div>
 
-    <div class="barraDivisoriaDeSecao">
-        <span class="barraTxt">Newsletter</span>
-        <span class=barraTxtSm>Inscreva-se para receber notificações sobre promoções e lançamentos</span>
-    </div>
-    <form #userForm="ngForm" (ngSubmit)="onSubmit()">
-
-        <div class="containerNewsletter">
-
-            <label for="email">Email: </label>
-            <input class=inputNome type="email" id="email" name="email" [(ngModel)]="userModel.email">
-         
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
+   
 
 
 
@@ -199,7 +186,7 @@
         </div>
         <span class="spanNews">Aqui você pode marcar uma data para jogar seu jogo preferido com os seus amigos! É rápido
             e fácil! Mas se preferir, apenas escolha com quem quer jogar e se divertir bastante!</span>
-        <a class="link" routerLink="/multiplayer">Criar um evento multiplayer</a>
+        <a id="eventos" class="link" routerLink="/multiplayer">Criar um evento multiplayer</a>
 
         <!-- BARRA MAIS VENDIDOS  -->
         <div id="barraDestaque" class="barraDivisoriaDeSecao">
@@ -233,6 +220,21 @@
 
             </div>
         </div>
+
+
+        <div class="barraDivisoriaDeSecao">
+            <span class="barraTxt">Newsletter</span>
+            <span class=barraTxtSm>Inscreva-se para receber notificações sobre promoções e lançamentos</span>
+        </div>
+        <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    
+            <div class="containerNewsletter">
+    
+                <input class=inputNome type="email" id="email" name="email" placeholder="Digite seu email" [(ngModel)]="userModel.email">
+             
+                <button id="nlBtn" type="submit">Enviar</button>
+            </div>
+        </form>
 
 
 

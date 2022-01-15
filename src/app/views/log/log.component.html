@@ -43,7 +43,7 @@
             <div class="containerNewsletter">
 
                 <label for='userName'>Nome de Usuário</label>
-                <input class="inputNome" type="text" id="nome" name="nome" [(ngModel)]="criarCad.name" required>
+                <input class="inputNome" type="text" id="nome" name="nome" (blur)="emailExist(verificarEmailInput())" [(ngModel)]="criarCad.name" required>
 
                 <label for="email">Email: </label>
                 <input class='inputNome' type="email" id="email" name="email" [(ngModel)]="criarCad.email" required>
@@ -52,11 +52,13 @@
                 <input type="password" id="senha" name="senha" [(ngModel)]="criarCad.password" required>
 
                 <label for="email">Confirme a Senha : </label>
-                <input class='inputNome' type="text" id="senhaC" name="senhaC" [(ngModel)]="criarCad.passwordB" required>
+                <input class='inputNome' type="password" id="senhaC" name="senhaC" [(ngModel)]="criarCad.passwordB" required>
                 
                 <button type="submit" (click)="cadastrar()">Cadastrar</button>
             </div>
         </form>
+        <p class="errorLogin" *ngIf=" mensagemCad != '' ">{{ mensagemCad }}</p>
+
 
     </div>
 </div>

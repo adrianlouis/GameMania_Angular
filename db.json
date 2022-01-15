@@ -18,6 +18,62 @@
       "name": "Chris",
       "passwordB": "orleons",
       "id": 3
+    },
+    {
+      "email": "neo@matrix.com",
+      "password": "$2a$10$Q/zzXdLE9CZBqeQO7uxgCuQ.RQN482/RRp.Xlz83yi77ZdgwYHJdS",
+      "name": "Thomas Anderson",
+      "passwordB": "trinity",
+      "id": 4
+    },
+    {
+      "email": "Trinity@matrix.com",
+      "password": "$2a$10$fxMU62FrE76XXcjfXq31o.2zy5/UhQt865oiTs9Voq1QFpwQs5BEu",
+      "name": "Trinity",
+      "passwordB": "neotheone",
+      "id": 5
+    },
+    {
+      "email": "morpheus@matrix.com",
+      "password": "$2a$10$J4dHAQHUGXjX3.h6fmJzteZZ258Ln0jaeF3928AGPmAgxkQfobuKO",
+      "name": "Morpheus",
+      "passwordB": "whereistheone",
+      "id": 6
+    },
+    {
+      "email": "adrian@email.com",
+      "password": "$2a$10$XQfV9xDzhqP/JpgZvlB1Uuipa9njccpgdd3R9cPwbzMRu.psTYVQG",
+      "name": "adrian",
+      "passwordB": "cachorro",
+      "id": 7
+    },
+    {
+      "email": "cBelmont@email.com",
+      "password": "$2a$10$Y1gOnMdXn71G41OVEFEqAOzoLaz8PgpUrlNEX/WSL4t9wd/.7hspS",
+      "name": "christianBelmont",
+      "passwordB": "vampire",
+      "id": 8
+    },
+    {
+      "email": "louisa@email.com",
+      "password": "$2a$10$eLAzReH7B5ZCI03OiG1YtO574mwxMkPEnS8NONrYQKhqYzyDF0pRG",
+      "name": "asdasd",
+      "passwordB": "asdasd",
+      "id": 9
+    },
+    {
+      "email": "asdasdasd@email.com",
+      "password": "$2a$10$zC3V3g9kHgQdTH56MQAII.sOKw8C4TyYj5b1FzAkjwudKrzKkDiby",
+      "name": "asdasdasd",
+      "passwordB": "asdasdasd",
+      "id": 10
+    },
+    {
+      "email": "qweqwe@email.com",
+      "password": "$2a$10$DOfsZ8C/3cvnZs/fnmgLR.iKOvmYn.ye/UlC8ONuDkvogSNcKZL7K",
+      "name": "qweqwe",
+      "passwordB": "qweqwe",
+      "id": 11
     }
   ],
   "noticias": [
@@ -25,7 +81,7 @@
       "id": 1,
       "titulo": "Diablo 2 Resurrected",
       "descricao": "270,00",
-      "boolean": true,
+      "boolean": false,
       "capa": "assets/img/capas/diablo2.jpg",
       "desc": "Diablo II: Resurrected inclui todo o conteúdo de Diablo II e sua expansão épica Diablo II: Lord of Destruction®. Lute por cavernas geladas, tumbas horríveis cheias de abominações mortas-vivas e terras desertas congeladas até o cume frígido do Monte Arreat e detenha Baal, o Senhor da Destruição. Faça um inferno com todas as sete classes jogáveis de Diablo II e Lord of Destruction, incluindo o astuto Assassino, mestre das armadilhas e disciplinas das sombras, e o Druida selvagem, um metamorfo ousado e invocador que comanda a magia elemental primordial."
     },
@@ -33,7 +89,7 @@
       "id": 2,
       "titulo": "Need For Speed Heat",
       "descricao": "150,00",
-      "boolean": true,
+      "boolean": false,
       "capa": "assets/img/capas/nfsHeat.jpg",
       "desc": "Trabalhe de dia e arrisque tudo à noite no Need for Speed™ Heat, um jogo de corrida emocionante que coloca você lado a lado contra a polícia corrupta da cidade."
     },
@@ -49,7 +105,7 @@
       "id": 4,
       "titulo": "Far Cry 6",
       "descricao": "125,00",
-      "boolean": true,
+      "boolean": false,
       "capa": "assets/img/capas/farcry6.jpg",
       "desc": "Bem-vindo a Yara, um paraíso tropical parado no tempo. Far Cry® 6 leva os jogadores ao mundo cheio de adrenalina de uma revolução moderna de guerrilha. Como ditador de Yara, Antón Castillo está empenhado em restaurar sua nação de volta à sua antiga glória por qualquer meio, com seu filho, Diego, obedientemente ao seu lado. Torne-se um guerrilheiro e destrua o regime deles."
     },
@@ -57,7 +113,7 @@
       "id": 5,
       "titulo": "Elden Ring",
       "descricao": "325,00",
-      "boolean": true,
+      "boolean": false,
       "capa": "assets/img/capas/eldenRing.jpg",
       "desc": "ELDEN RING, desenvolvido pela FromSoftware, Inc. e pela BANDAI NAMCO Entertainment Inc., é uma aventura de RPG de ação e fantasia ambientada em um mundo criado por Hidetaka Miyazak e George R. R. Martin. O perigo e a descoberta estão à espreita em cada canto do maior jogo da FromSoftware até hoje."
     },

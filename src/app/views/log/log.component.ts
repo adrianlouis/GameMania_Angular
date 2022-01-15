@@ -15,8 +15,10 @@ export class LogComponent implements OnInit {
 
   tabCadLog: number = 1;
   s: number = 5;
+  cs: number = 5;
   toogleLogin: number = 1;
-  userLogado: string = ""
+  userLogado: string = "";
+  mensagemCad: string = "";
 
   criarCad: Cadastro = {
     name: "",
@@ -38,12 +40,25 @@ export class LogComponent implements OnInit {
       alert('Senhas não conferem')
       return
     } else if (this.criarCad.name == "" || this.criarCad.email == "" || this.criarCad.password == "") {
-      alert('Preencha os campos corretamente')
+      alert('Preencha todos os campos')
       return
     } else {
       this.cadService.criarUser(this.criarCad).subscribe(() => {
-        this.tabCadLog = 1;
-        this.userLogado = this.criarCad.name
+        this.cs = 5;
+        let timer = setInterval(() => {
+          
+          if (this.cs !== 0) {
+            this.mensagemCad = "Cadastro realizado. Você será redirecionado ao login em " + this.cs + " segundos."
+            this.cs--;
+          } else {
+            clearInterval(timer);
+            this.toogleLogin = 1;
+            this.tabCadLog = 1;
+            
+          }
+        }, 1000)
+
+        
       })
     }
 
@@ -74,6 +89,23 @@ export class LogComponent implements OnInit {
 
   mensagem = "";
 
+  emailExist(id: string){
+    this.cadService.buscarUm(id).subscribe((emailConsulta:Cadastro[]) =>{
+      console.log(emailConsulta[0].name)
+      console.log(emailConsulta[0].email)
+
+      if (emailConsulta[0].email !== undefined){
+        console.log('Email existente: '+emailConsulta[0].email)
+      }else{
+        console.log('Email inexistente')
+      }
+    })
+  }
+
+  verificarEmailInput(){
+    return this.criarCad.name
+  }
+
 
 
   onSubmit() {
@@ -103,7 +135,7 @@ export class LogComponent implements OnInit {
         this.mensagem = "Usuário não encontrado"
       } else if (error.error === "Incorrect password") {
         this.mensagem = "Senha inválida"
-      } else if (error.error = "Password is too short") {
+      } else if (error.error === "Password is too short") {
         this.mensagem = "Senha muito curta"
       } else {
         this.mensagem = "Formato do email inválido"
