@@ -20,6 +20,6 @@ export class CadastroService {
   }
 
   buscarUm(email: string):Observable<Cadastro[]>{
-    return this.http.get<Cadastro[]>(`${this.url}/?name=${email}`)
+    return this.http.get<Cadastro[]>(`${this.url}/?email=${email}`)
   }
 }

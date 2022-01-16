@@ -19,6 +19,8 @@ export class LogComponent implements OnInit {
   toogleLogin: number = 1;
   userLogado: string = "";
   mensagemCad: string = "";
+  emailExists: boolean = false;
+  msgEmailExists: string = "";
 
   criarCad: Cadastro = {
     name: "",
@@ -37,10 +39,13 @@ export class LogComponent implements OnInit {
 
   cadastrar() {
     if (this.criarCad.password !== this.criarCad.passwordB) {
-      alert('Senhas não conferem')
+      this.mensagemCad = 'Senhas não conferem'
       return
     } else if (this.criarCad.name == "" || this.criarCad.email == "" || this.criarCad.password == "") {
-      alert('Preencha todos os campos')
+      this.mensagemCad = 'Preencha todos os campos'
+      return
+
+    } else if (this.emailExists !== false){
       return
     } else {
       this.cadService.criarUser(this.criarCad).subscribe(() => {
@@ -54,14 +59,10 @@ export class LogComponent implements OnInit {
             clearInterval(timer);
             this.toogleLogin = 1;
             this.tabCadLog = 1;
-            
           }
-        }, 1000)
-
-        
+        }, 1000) 
       })
     }
-
   }
 
   loginCerto() {
@@ -91,19 +92,19 @@ export class LogComponent implements OnInit {
 
   emailExist(id: string){
     this.cadService.buscarUm(id).subscribe((emailConsulta:Cadastro[]) =>{
-      console.log(emailConsulta[0].name)
-      console.log(emailConsulta[0].email)
-
-      if (emailConsulta[0].email !== undefined){
-        console.log('Email existente: '+emailConsulta[0].email)
+     
+      if (emailConsulta.length > 0){
+        this.emailExists = true;
+        this.msgEmailExists = "Email já cadastrado"
       }else{
-        console.log('Email inexistente')
+        this.emailExists = false;
+        this.msgEmailExists = ""
       }
     })
   }
 
   verificarEmailInput(){
-    return this.criarCad.name
+    return this.criarCad.email
   }
 
 
